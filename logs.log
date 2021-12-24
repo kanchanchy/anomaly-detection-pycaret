@@ -1,0 +1,162 @@
+ 17:19:28,028:INFO:Importing libraries
+2021-09-09 17:19:28,028:INFO:Copying data for preprocessing
+2021-09-09 17:19:28,046:INFO:Declaring preprocessing parameters
+2021-09-09 17:19:28,064:INFO:Creating preprocessing pipeline
+2021-09-09 17:19:28,090:INFO:Preprocessing pipeline created successfully
+2021-09-09 17:19:28,091:ERROR:(Process Exit): setup has been interupted with user command 'quit'. setup must rerun.
+2021-09-09 17:19:28,092:INFO:Creating global containers
+2021-09-09 17:19:28,094:INFO:Internal pipeline: Pipeline(memory=None, steps=[('empty_step', 'passthrough')], verbose=False)
+2021-09-09 17:19:31,534:INFO:Creating grid variables
+2021-09-09 17:19:32,170:INFO:create_model_container: 0
+2021-09-09 17:19:32,171:INFO:master_model_container: 0
+2021-09-09 17:19:32,171:INFO:display_container: 1
+2021-09-09 17:19:32,182:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='UNSUPERVISED_DUMMY_TARGET',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='most frequent',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='UNSUPERVISED_DUMMY_TARGET')),
+                ('fix_perfect', 'passthrough'),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False)
+2021-09-09 17:19:32,182:INFO:setup() succesfully completed......................................
+2021-09-09 17:19:32,540:INFO:gpu_param set to False
+2021-09-09 17:19:32,588:INFO:Initializing create_model()
+2021-09-09 17:19:32,590:INFO:create_model(estimator=iforest, num_clusters=4, fraction=0.05, ground_truth=None, round=4, fit_kwargs=None, verbose=True, system=True, raise_num_clusters=False, display=None, kwargs={})
+2021-09-09 17:19:32,594:INFO:Checking exceptions
+2021-09-09 17:19:32,594:INFO:Preparing display monitor
+2021-09-09 17:19:32,624:INFO:Importing libraries
+2021-09-09 17:19:32,644:INFO:Importing untrained model
+2021-09-09 17:19:32,659:INFO:Isolation Forest Imported succesfully
+2021-09-09 17:19:32,673:INFO:Fitting Model
+2021-09-09 17:19:33,241:INFO:IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=123, verbose=0)
+2021-09-09 17:19:33,242:INFO:create_models() succesfully completed......................................
+2021-09-09 17:19:33,243:INFO:Uploading results into container
+2021-09-09 17:19:33,245:INFO:Uploading model into container now
+2021-09-09 17:19:33,247:INFO:create_model_container: 1
+2021-09-09 17:19:33,248:INFO:master_model_container: 1
+2021-09-09 17:19:33,248:INFO:display_container: 2
+2021-09-09 17:19:33,249:INFO:IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=123, verbose=0)
+2021-09-09 17:19:33,250:INFO:create_model() succesfully completed......................................
+2021-09-09 17:19:33,563:INFO:Initializing create_model()
+2021-09-09 17:19:33,563:INFO:create_model(estimator=knn, num_clusters=4, fraction=0.05, ground_truth=None, round=4, fit_kwargs=None, verbose=True, system=True, raise_num_clusters=False, display=None, kwargs={})
+2021-09-09 17:19:33,564:INFO:Checking exceptions
+2021-09-09 17:19:33,564:INFO:Preparing display monitor
+2021-09-09 17:19:33,589:INFO:Importing libraries
+2021-09-09 17:19:33,605:INFO:Importing untrained model
+2021-09-09 17:19:33,621:INFO:K-Nearest Neighbors Detector Imported succesfully
+2021-09-09 17:19:33,635:INFO:Fitting Model
+2021-09-09 17:19:33,682:INFO:KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0)
+2021-09-09 17:19:33,683:INFO:create_models() succesfully completed......................................
+2021-09-09 17:19:33,684:INFO:Uploading results into container
+2021-09-09 17:19:33,684:INFO:Uploading model into container now
+2021-09-09 17:19:33,686:INFO:create_model_container: 2
+2021-09-09 17:19:33,686:INFO:master_model_container: 2
+2021-09-09 17:19:33,686:INFO:display_container: 3
+2021-09-09 17:19:33,686:INFO:KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0)
+2021-09-09 17:19:33,686:INFO:create_model() succesfully completed......................................
+2021-09-09 17:19:33,942:INFO:Initializing assign_model()
+2021-09-09 17:19:33,942:INFO:assign_model(model=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=123, verbose=0), transformation=False, score=True, verbose=True)
+2021-09-09 17:19:33,942:INFO:Checking exceptions
+2021-09-09 17:19:33,942:INFO:Determining Trained Model
+2021-09-09 17:19:33,943:INFO:Trained Model : Isolation Forest
+2021-09-09 17:19:33,943:INFO:Copying data
+2021-09-09 17:19:33,945:INFO:(1000, 12)
+2021-09-09 17:19:33,946:INFO:assign_model() succesfully completed......................................
+2021-09-09 17:19:34,040:INFO:Initializing plot_model()
+2021-09-09 17:19:34,041:INFO:plot_model(plot=tsne, fold=None, use_train_data=False, verbose=True, is_in_evaluate=False, display=None, display_format=None, estimator=KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0), feature_name=None, fit_kwargs=None, groups=None, label=False, save=False, scale=1, system=True)
+2021-09-09 17:19:34,042:INFO:Checking exceptions
+2021-09-09 17:19:34,042:INFO:Preparing display monitor
+2021-09-09 17:19:34,057:INFO:Preloading libraries
+2021-09-09 17:19:34,063:INFO:Copying training dataset
+2021-09-09 17:19:34,064:INFO:Plot type: tsne
+2021-09-09 17:19:34,412:INFO:SubProcess assign_model() called ==================================
+2021-09-09 17:19:34,413:INFO:Initializing assign_model()
+2021-09-09 17:19:34,413:INFO:assign_model(model=KNN(algorithm='auto', contamination=0.05, leaf_size=30, method='largest',
+  metric='minkowski', metric_params=None, n_jobs=-1, n_neighbors=5, p=2,
+  radius=1.0), transformation=True, score=False, verbose=False)
+2021-09-09 17:19:34,413:INFO:Checking exceptions
+2021-09-09 17:19:34,413:INFO:Determining Trained Model
+2021-09-09 17:19:34,414:INFO:Trained Model : K-Nearest Neighbors Detector
+2021-09-09 17:19:34,414:INFO:Copying data
+2021-09-09 17:19:34,414:INFO:Transformation param set to True. Assigned clusters are attached on transformed dataset.
+2021-09-09 17:19:34,415:INFO:(1000, 11)
+2021-09-09 17:19:34,415:INFO:assign_model() succesfully completed......................................
+2021-09-09 17:19:34,416:INFO:SubProcess assign_model() end ==================================
+2021-09-09 17:19:34,419:INFO:Getting dummies to cast categorical variables
+2021-09-09 17:19:34,419:INFO:Fitting TSNE()
+2021-09-09 17:20:01,579:INFO:Rendering Visual
+2021-09-09 17:20:09,870:INFO:Visual Rendered Successfully
+2021-09-09 17:20:10,219:INFO:plot_model() succesfully completed......................................
+2021-09-09 17:20:10,370:INFO:Initializing save_model()
+2021-09-09 17:20:10,485:INFO:save_model(model=IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=123, verbose=0), model_name=iforest, prep_pipe_=Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='UNSUPERVISED_DUMMY_TARGET',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='most frequent',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None...
+                ('scaling', 'passthrough'), ('P_transform', 'passthrough'),
+                ('binn', 'passthrough'), ('rem_outliers', 'passthrough'),
+                ('cluster_all', 'passthrough'),
+                ('dummy', Dummify(target='UNSUPERVISED_DUMMY_TARGET')),
+                ('fix_perfect', 'passthrough'),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough')],
+         verbose=False), verbose=True, kwargs={})
+2021-09-09 17:20:10,485:INFO:Adding model into prep_pipe
+2021-09-09 17:20:10,700:INFO:iforest.pkl saved in current working directory
+2021-09-09 17:20:10,712:INFO:Pipeline(memory=None,
+         steps=[('dtypes',
+                 DataTypes_Auto_infer(categorical_features=[],
+                                      display_types=True, features_todrop=[],
+                                      id_columns=[], ml_usecase='regression',
+                                      numerical_features=[],
+                                      target='UNSUPERVISED_DUMMY_TARGET',
+                                      time_features=[])),
+                ('imputer',
+                 Simple_Imputer(categorical_strategy='most frequent',
+                                fill_value_categorical=None,
+                                fill_value_numerical=None...
+                ('fix_perfect', 'passthrough'),
+                ('clean_names', Clean_Colum_Names()),
+                ('feature_select', 'passthrough'), ('fix_multi', 'passthrough'),
+                ('dfs', 'passthrough'), ('pca', 'passthrough'),
+                ['trained_model',
+                 IForest(behaviour='new', bootstrap=False, contamination=0.05,
+    max_features=1.0, max_samples='auto', n_estimators=100, n_jobs=-1,
+    random_state=123, verbose=0)]],
+         verbose=False)
+2021-09-09 17:20:10,712:INFO:save_model() successfully completed......................................
