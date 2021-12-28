@@ -6,7 +6,6 @@ To summarize, this repository performs the following operations:
 1. Loading data from Pycaret library
 2. Exploring the data by plotting visualizations
 3. Preprocessing the data for anomaly detection model
-4. Creating an autoencoder model to denoise image
-5. Building anomaly detection model
-6. Evaluating anomaly detection model
-7. Deploying anomaly detection model
+4. Building anomaly detection model
+5. Evaluating anomaly detection model
+6. Deploying anomaly detection model
